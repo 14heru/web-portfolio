@@ -751,3 +751,373 @@ body.login-page { min-height: 100vh; display: flex; align-items: center; justify
 .auth-card,
 .login-card { width: 100%; max-width: 430px; padding: clamp(1.6rem, 4vw, 2.6rem); border-radius: var(--radius-xl); background: linear-gradient(160deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.02) 65%) !important; border: 1px solid var(--border-glass-strong) !important; backdrop-filter: blur(24px) saturate(150%); -webkit-backdrop-filter: blur(24px) saturate(150%); box-shadow: var(--shadow-glass), 0 30px 80px -40px rgba(56, 189, 248, 0.65) !important; color: var(--text-soft); }
 .auth-icon { width: 64px; height: 64px; border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.85rem; color: #06121c; background: var(--accent-gradient); box-shadow: var(--glow-cyan); }
+
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE HARDENING
+   --------------------------------------------------------------------------
+   Aturan tambahan untuk mencegah konten terpotong pada ponsel kecil,
+   tablet/iPad portrait-landscape, laptop, dan layar lebar.
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+/* Teks panjang tidak boleh mendorong layout melewati viewport. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+label,
+td,
+th {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Email/link panjang pada contact dan admin tetap dapat dibaca. */
+a[href^="mailto:"],
+.text-break,
+.text-truncate {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Bootstrap row negatif tidak boleh membuat halaman melebar pada browser lama. */
+.row {
+  --bs-gutter-x: 1.5rem;
+  max-width: 100%;
+}
+
+.hero-section .container,
+.section .container,
+.site-footer .container,
+.admin-main,
+.admin-footer .container {
+  min-width: 0;
+}
+
+.hero-title,
+.hero-subtitle,
+.profile-card,
+.profile-meta,
+.skill-card,
+.portfolio-card,
+.card,
+.glass-card {
+  min-width: 0;
+}
+
+/* Tombol kartu proyek boleh turun baris, bukan terpotong. */
+.portfolio-card .card-body > .d-flex.gap-2 {
+  flex-wrap: wrap;
+}
+
+.portfolio-card .card-body > .d-flex.gap-2 .btn {
+  min-width: min(130px, 100%);
+}
+
+/* Input group tidak memaksa lebar pada viewport sempit. */
+.input-group,
+.input-group > .form-control,
+.input-group > .form-select {
+  min-width: 0;
+}
+
+.input-group > .form-control {
+  width: 1%;
+  flex: 1 1 auto;
+}
+
+/* Tabel admin tetap utuh lewat scroll internal, tidak memotong halaman. */
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > .table {
+  min-width: 680px;
+}
+
+.admin-main .card {
+  min-width: 0;
+}
+
+.admin-main .sticky-top {
+  z-index: 10;
+}
+
+/* Detail aksi/admin tidak keluar dari kartu ketika label panjang. */
+.admin-main .btn-group,
+.admin-main .d-flex {
+  min-width: 0;
+}
+
+.admin-main .btn-group {
+  flex-wrap: wrap;
+}
+
+/* Safe area untuk perangkat dengan notch/home indicator. */
+.navbar,
+.site-footer,
+.admin-footer {
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+  }
+
+  .profile-frame {
+    width: min(300px, 78vw);
+  }
+
+  .admin-main .table-responsive > .table {
+    min-width: 640px;
+  }
+}
+
+/* iPad/tablet: beri ruang lebih lega dan cegah sticky form terlalu tinggi. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-section {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .profile-frame {
+    width: min(290px, 42vw);
+  }
+
+  .portfolio-card .card-body,
+  .skill-card {
+    padding: 1.25rem !important;
+  }
+
+  .admin-main .sticky-top {
+    position: static !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --section-padding: clamp(2.75rem, 10vw, 4rem);
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 9vw, 2.65rem);
+    line-height: 1.16;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 0.7rem !important;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .profile-frame {
+    width: min(290px, 82vw);
+    padding-top: 2.2rem;
+  }
+
+  .section .container {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .glass-card-pad,
+  .portfolio-card .card-body,
+  .skill-card {
+    padding: 1.15rem !important;
+  }
+
+  .stat-card {
+    padding: 0.85rem 0.5rem;
+  }
+
+  .stat-card .stat-value {
+    font-size: clamp(1.25rem, 6vw, 1.6rem);
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .portfolio-card .card-img-wrapper {
+    height: clamp(170px, 48vw, 210px);
+  }
+
+  .portfolio-card .card-body > .d-flex.gap-2 .btn {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 1rem;
+  }
+
+  .site-footer .row > [class*="col-"] {
+    width: 100%;
+  }
+
+  .site-footer .footer-links {
+    gap: 0.55rem !important;
+  }
+
+  .admin-main {
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .admin-main .sticky-top {
+    position: static !important;
+  }
+
+  .admin-page-head {
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .admin-page-head > * {
+    max-width: 100%;
+  }
+
+  .admin-page-head .btn,
+  .admin-main > .d-flex > .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .admin-main .card-header {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .admin-main .card-header > * {
+    min-width: 0;
+  }
+
+  .admin-main .table-responsive > .table {
+    min-width: 620px;
+  }
+
+  .admin-main .btn-group {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .container,
+  .container-fluid,
+  .navbar .container {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .pill-badge {
+    max-width: 100%;
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.74rem;
+  }
+
+  .hero-title {
+    font-size: 1.78rem;
+  }
+
+  .profile-frame {
+    width: min(270px, 86vw);
+  }
+
+  .row {
+    --bs-gutter-x: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .profile-frame {
+    width: min(230px, 34vw);
+  }
+}
