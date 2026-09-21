@@ -1,0 +1,91 @@
+# =============================================================================
+# .gitignore - Web Portfolio (Heru Perdana Saputra)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. DEPENDENCY & LIBRARY (Composer)
+# -----------------------------------------------------------------------------
+/vendor/
+composer.phar
+
+# -----------------------------------------------------------------------------
+# 2. KONFIGURASI SENSITIF (JANGAN DI-COMMIT KE GITHUB)
+# -----------------------------------------------------------------------------
+/config/database.php
+/config/mail.php
+
+# Gunakan versi .example.php sebagai template yang aman untuk di-commit:
+# config/database.example.php
+# config/mail.example.php
+
+# -----------------------------------------------------------------------------
+# 3. BERKAS SISTEM OPERASI
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# -----------------------------------------------------------------------------
+# 4. BERKAS EDITOR & IDE
+# -----------------------------------------------------------------------------
+# Visual Studio Code
+.vscode/
+
+# JetBrains (PhpStorm, WebStorm, dll.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+
+# -----------------------------------------------------------------------------
+# 5. BERKAS LOG & TEMPORARY
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+/logs/
+
+# PHP error log
+php_errors.log
+error_log
+
+# -----------------------------------------------------------------------------
+# 6. ENVIRONMENT & BERKAS RAHASIA LAINNYA
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# Berkas backup database
+*.sql.bak
+*.sql.gz
+
+# Upload sementara
+/uploads/temp/
+
+# Script utilitas satu kali pakai (sudah dieksekusi)
+update_password.php
+verify.php
+
