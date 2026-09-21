@@ -48,8 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 3. Highlight Tautan Navigasi yang Sedang Aktif Berdasarkan Scroll
+  // 3. Highlight navigasi + state navbar saat scroll
   const sections = document.querySelectorAll("section[id]");
+  const mainNavbar = document.querySelector(".navbar-glass");
+  const updateNavbarState = () => {
+    if (mainNavbar) {
+      mainNavbar.classList.toggle("is-scrolled", window.pageYOffset > 24);
+    }
+  };
+  updateNavbarState();
+  window.addEventListener("scroll", updateNavbarState, { passive: true });
   window.addEventListener("scroll", () => {
     const scrollY = window.pageYOffset;
     sections.forEach((current) => {

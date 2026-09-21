@@ -171,22 +171,25 @@ try {
     <!-- Bootstrap 5 CDN & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/theme-glass.css">
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #334155;
+            background-color: #0a0d14;
+            color: #cbd5e1;
         }
         h1, h2, h3, h4, h5, h6, .brand-font {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="admin-body d-flex flex-column min-vh-100">
+<div class="bg-aurora" aria-hidden="true"></div>
 
 <!-- Top Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3 shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-dark admin-navbar sticky-top py-3 shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.php">
             <span class="bg-primary text-white rounded-3 p-1 px-2 fs-6">
@@ -248,7 +251,7 @@ try {
 </nav>
 
 <!-- Main Content -->
-<main class="container py-4 flex-grow-1">
+<main class="container admin-main flex-grow-1">
     <!-- Header -->
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4 pb-3 border-bottom">
         <div>
@@ -401,7 +404,7 @@ try {
 </main>
 
 <!-- Footer Admin -->
-<footer class="bg-white border-top py-3 text-center text-muted small mt-auto">
+<footer class="admin-footer mt-auto">
     <div class="container">
         &copy; <?= date('Y'); ?> Admin Panel - Web Portfolio.
     </div>

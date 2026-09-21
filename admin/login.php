@@ -67,11 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <!-- Bootstrap 5 CDN & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/theme-glass.css">
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            background: #0a0d14;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -95,12 +97,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         }
     </style>
 </head>
-<body>
+<body class="auth-body">
+<div class="bg-aurora" aria-hidden="true"></div>
 
-<div class="login-card p-4 p-md-5">
+<div class="login-card auth-card">
     <div class="text-center mb-4">
-        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-circle mb-3" style="width: 64px; height: 64px;">
-            <i class="bi bi-shield-lock-fill fs-2"></i>
+        <div class="auth-icon mb-3">
+            <i class="bi bi-shield-lock-fill"></i>
         </div>
         <h4 class="fw-bold mb-1 brand-font">Admin Panel</h4>
         <p class="text-muted small">Masuk untuk mengelola web portofolio</p>

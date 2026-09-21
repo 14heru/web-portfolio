@@ -25,5 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme-glass.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <div class="bg-aurora" aria-hidden="true"></div>

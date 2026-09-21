@@ -88,46 +88,39 @@ require_once __DIR__ . '/includes/navbar.php';
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-7">
-                <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-primary bg-opacity-10 text-primary fw-semibold small">
-                    <i class="bi bi-patch-check-fill"></i> Terbuka untuk Peluang Proyek Baru
-                </div>
+                <span class="pill-badge mb-4 text-white">
+                    <i class="bi bi-stars"></i> Terbuka untuk Peluang Proyek Baru
+                </span>
+                <p class="hero-eyebrow mb-3">Fullstack Developer · Indonesia</p>
                 <h1 class="hero-title mb-3">
-                    Halo, Saya <span class="text-primary">Heru Perdana Saputra</span>.
+                    <span class="text-white">Hi, I'm</span> <span class="text-gradient">Heru Perdana Saputra</span>.
                 </h1>
                 <p class="hero-subtitle mb-4">
                     Saya seorang pengembang web profesional yang merancang dan membangun aplikasi web yang cepat, responsif, serta mudah digunakan dengan teknologi terkini seperti PHP, MySQL, dan Bootstrap.
                 </p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                    <a href="#projects" class="btn btn-primary btn-lg px-4 rounded-pill shadow-sm d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-briefcase"></i> Lihat Proyek
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg px-4 rounded-pill d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-send"></i> Contact Me
                     </a>
-                    <a href="#contact" class="btn btn-outline-dark btn-lg px-4 rounded-pill d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-envelope"></i> Hubungi Saya
-                    </a>
-                    <a href="https://github.com/14heru" target="_blank" rel="noopener noreferrer" class="btn btn-light border btn-lg px-3 rounded-pill d-inline-flex align-items-center gap-2 text-dark shadow-sm" title="Profil GitHub Heru">
+                    <a href="https://github.com/14heru" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg px-4 rounded-pill d-inline-flex align-items-center gap-2" title="Profil GitHub Heru">
                         <i class="bi bi-github"></i> GitHub
                     </a>
                 </div>
             </div>
 
             <div class="col-lg-5 text-center">
-                <div class="p-4 bg-white rounded-4 shadow-sm border text-start">
-                    <div class="d-flex align-items-center gap-3 pb-3 border-bottom mb-3">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fs-3" style="width: 56px; height: 56px;">
-                            <i class="bi bi-terminal"></i>
+                <div class="profile-frame">
+                    <div class="profile-lanyard" aria-hidden="true"></div>
+                    <div class="profile-card">
+                        <div class="profile-photo-wrapper">
+                            <img src="assets/img/IMG_3603.JPG.jpeg" alt="Foto profil Heru Perdana Saputra" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                            <div class="profile-initials" hidden>HPS<small>Profile photo</small></div>
                         </div>
-                        <div>
-                            <h5 class="fw-bold mb-0">Tech Stack</h5>
-                            <small class="text-muted">Teknologi Utama yang Digunakan</small>
+                        <div class="profile-meta">
+                            <div class="profile-name">Heru Perdana Saputra</div>
+                            <div class="profile-role">Fullstack Developer</div>
+                            <div class="profile-status"><span class="dot"></span> Available for collaboration</div>
                         </div>
-                    </div>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-filetype-php text-primary"></i> PHP</span>
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-database text-warning"></i> MySQL</span>
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-bootstrap text-purple"></i> Bootstrap 5</span>
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-filetype-html text-danger"></i> HTML5 & CSS3</span>
-                        <span class="badge bg-light text-dark border px-3 py-2 fs-6 fw-normal"><i class="bi bi-git text-danger"></i> Git & GitHub</span>
                     </div>
                 </div>
             </div>
@@ -136,36 +129,16 @@ require_once __DIR__ . '/includes/navbar.php';
 </section>
 
 <!-- ================= ABOUT SECTION ================= -->
-<section id="about" class="py-5 bg-white border-top border-bottom">
+<section id="about" class="section section-divider border-bottom">
     <div class="container py-4">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="position-relative p-4 bg-light rounded-4 border">
+                <div class="glass-card glass-card-pad">
                     <div class="row g-3">
-                        <div class="col-6">
-                            <div class="p-3 bg-white rounded-3 shadow-sm border text-center">
-                                <h3 class="fw-bold text-primary mb-1">3+</h3>
-                                <p class="text-muted small mb-0">Tahun Pengalaman</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-white rounded-3 shadow-sm border text-center">
-                                <h3 class="fw-bold text-primary mb-1">25+</h3>
-                                <p class="text-muted small mb-0">Proyek Selesai</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-white rounded-3 shadow-sm border text-center">
-                                <h3 class="fw-bold text-primary mb-1">15+</h3>
-                                <p class="text-muted small mb-0">Klien Puas</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-white rounded-3 shadow-sm border text-center">
-                                <h3 class="fw-bold text-primary mb-1">100%</h3>
-                                <p class="text-muted small mb-0">Dedikasi Kualitas</p>
-                            </div>
-                        </div>
+                        <div class="col-6"><div class="stat-card"><div class="stat-value">1</div><p class="stat-label">Tahun Pengalaman</p></div></div>
+                        <div class="col-6"><div class="stat-card"><div class="stat-value">3</div><p class="stat-label">Proyek Selesai</p></div></div>
+                        <div class="col-6"><div class="stat-card"><div class="stat-value">-</div><p class="stat-label">Klien Puas</p></div></div>
+                        <div class="col-6"><div class="stat-card"><div class="stat-value">100%</div><p class="stat-label">Dedikasi Kualitas</p></div></div>
                     </div>
                 </div>
             </div>
@@ -208,7 +181,7 @@ require_once __DIR__ . '/includes/navbar.php';
 </section>
 
 <!-- ================= SKILLS SECTION ================= -->
-<section id="skills" class="py-5">
+<section id="skills" class="section section-divider">
     <div class="container py-4">
         <div class="text-center max-w-600 mx-auto mb-5">
             <h6 class="text-primary fw-bold text-uppercase mb-2">Keahlian</h6>
@@ -219,7 +192,7 @@ require_once __DIR__ . '/includes/navbar.php';
         <div class="row g-4">
             <!-- Skill 1: Frontend -->
             <div class="col-md-4">
-                <div class="skill-card h-100 shadow-sm">
+                <div class="skill-card glass-card-hover h-100">
                     <div class="skill-icon bg-primary bg-opacity-10 text-primary">
                         <i class="bi bi-layout-text-window-reverse"></i>
                     </div>
@@ -236,7 +209,7 @@ require_once __DIR__ . '/includes/navbar.php';
 
             <!-- Skill 2: Backend -->
             <div class="col-md-4">
-                <div class="skill-card h-100 shadow-sm">
+                <div class="skill-card glass-card-hover h-100">
                     <div class="skill-icon bg-success bg-opacity-10 text-success">
                         <i class="bi bi-server"></i>
                     </div>
@@ -253,7 +226,7 @@ require_once __DIR__ . '/includes/navbar.php';
 
             <!-- Skill 3: Tools & Best Practices -->
             <div class="col-md-4">
-                <div class="skill-card h-100 shadow-sm">
+                <div class="skill-card glass-card-hover h-100">
                     <div class="skill-icon bg-warning bg-opacity-10 text-warning">
                         <i class="bi bi-tools"></i>
                     </div>
@@ -272,7 +245,7 @@ require_once __DIR__ . '/includes/navbar.php';
 </section>
 
 <!-- ================= PROJECTS SECTION ================= -->
-<section id="projects" class="py-5 bg-white border-top">
+<section id="projects" class="section section-divider border-top">
     <div class="container py-4">
         <div class="text-center max-w-600 mx-auto mb-4">
             <h6 class="text-primary fw-bold text-uppercase mb-2">Portofolio</h6>
@@ -297,7 +270,7 @@ require_once __DIR__ . '/includes/navbar.php';
             <?php if (!empty($projects)): ?>
                 <?php foreach ($projects as $project): ?>
                     <div class="col-lg-4 col-md-6 project-item" data-category="<?= htmlspecialchars($project['category_slug'] ?? 'uncategorized'); ?>">
-                        <div class="portfolio-card h-100 d-flex flex-column">
+                        <div class="portfolio-card glass-card-hover h-100 d-flex flex-column">
                             <div class="card-img-wrapper">
                                 <?php if (!empty($project['image']) && file_exists(__DIR__ . '/assets/img/' . $project['image'])): ?>
                                     <img src="assets/img/<?= htmlspecialchars($project['image']); ?>" alt="<?= htmlspecialchars($project['title']); ?>" loading="lazy">
@@ -356,7 +329,7 @@ require_once __DIR__ . '/includes/navbar.php';
 </section>
 
 <!-- ================= CONTACT SECTION ================= -->
-<section id="contact" class="py-5">
+<section id="contact" class="section section-divider">
     <div class="container py-4">
         <div class="row g-5">
             <!-- Informasi Kontak -->
@@ -368,7 +341,7 @@ require_once __DIR__ . '/includes/navbar.php';
                 </p>
 
                 <div class="d-flex flex-column gap-3">
-                    <div class="d-flex align-items-start gap-3 p-3 bg-white rounded-3 border shadow-sm">
+                    <div class="glass-card glass-card-hover glass-card-pad d-flex align-items-start gap-3">
                         <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-3 fs-5">
                             <i class="bi bi-envelope"></i>
                         </div>
@@ -378,7 +351,7 @@ require_once __DIR__ . '/includes/navbar.php';
                         </div>
                     </div>
 
-                    <div class="d-flex align-items-start gap-3 p-3 bg-white rounded-3 border shadow-sm">
+                    <div class="glass-card glass-card-hover glass-card-pad d-flex align-items-start gap-3">
                         <div class="bg-info bg-opacity-10 text-info p-2 rounded-3 fs-5">
                             <i class="bi bi-geo-alt"></i>
                         </div>
@@ -392,7 +365,7 @@ require_once __DIR__ . '/includes/navbar.php';
 
             <!-- Formulir Kontak -->
             <div class="col-lg-7">
-                <div class="p-4 p-md-5 bg-white rounded-4 border shadow-sm">
+                <div class="glass-card glass-card-pad p-md-5">
                     <h4 class="fw-bold mb-3">Kirim Pesan</h4>
 
                     <!-- Notifikasi Pesan -->

@@ -1,9 +1,9 @@
-<footer class="bg-dark text-light pt-5 pb-4 mt-auto border-top border-secondary border-opacity-25">
+<footer class="site-footer text-light mt-auto">
     <div class="container">
         <div class="row g-4 justify-content-between">
             <div class="col-lg-4 col-md-6">
                 <h5 class="fw-bold text-white mb-3 d-flex align-items-center gap-2">
-                    <span class="bg-primary text-white rounded p-1 px-2 fs-6">
+                    <span class="brand-mark">
                         <i class="bi bi-code-slash"></i>
                     </span>
                     Heru Perdana Saputra
@@ -12,16 +12,16 @@
                     Solusi pembuatan website profesional, performa tinggi, dan responsif untuk berbagai kebutuhan personal maupun bisnis.
                 </p>
                 <div class="d-flex gap-2">
-                    <a href="https://github.com/14heru" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle text-light social-btn" aria-label="GitHub">
+                    <a href="https://github.com/14heru" target="_blank" rel="noopener noreferrer" class="btn btn-sm social-btn" aria-label="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle text-light social-btn" aria-label="LinkedIn">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm social-btn" aria-label="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle text-light social-btn" aria-label="Twitter">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm social-btn" aria-label="Twitter">
                         <i class="bi bi-twitter-x"></i>
                     </a>
-                    <a href="mailto:heruperdanaaa@gmail.com" class="btn btn-sm btn-outline-secondary rounded-circle text-light social-btn" aria-label="Email">
+                    <a href="mailto:heruperdanaaa@gmail.com" class="btn btn-sm social-btn" aria-label="Email">
                         <i class="bi bi-envelope"></i>
                     </a>
                 </div>
@@ -29,12 +29,12 @@
 
             <div class="col-lg-2 col-md-3 col-6">
                 <h6 class="fw-semibold text-white mb-3">Tautan Cepat</h6>
-                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
-                    <li><a href="#hero" class="text-secondary text-decoration-none hover-white">Beranda</a></li>
-                    <li><a href="#about" class="text-secondary text-decoration-none hover-white">Tentang Saya</a></li>
-                    <li><a href="#skills" class="text-secondary text-decoration-none hover-white">Keahlian</a></li>
-                    <li><a href="#projects" class="text-secondary text-decoration-none hover-white">Proyek Portofolio</a></li>
-                    <li><a href="#contact" class="text-secondary text-decoration-none hover-white">Kontak</a></li>
+                <ul class="list-unstyled small mb-0 d-flex flex-column gap-2 footer-links">
+                    <li><a href="#hero" class="text-decoration-none">Beranda</a></li>
+                    <li><a href="#about" class="text-decoration-none">Tentang Saya</a></li>
+                    <li><a href="#skills" class="text-decoration-none">Keahlian</a></li>
+                    <li><a href="#projects" class="text-decoration-none">Proyek Portofolio</a></li>
+                    <li><a href="#contact" class="text-decoration-none">Kontak</a></li>
                 </ul>
             </div>
 
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <hr class="my-4 border-secondary opacity-25">
+        <hr class="my-4 footer-divider">
 
         <div class="row align-items-center small text-secondary">
             <div class="col-md-6 text-center text-md-start">

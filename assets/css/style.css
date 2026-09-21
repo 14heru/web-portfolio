@@ -1,14 +1,17 @@
 /* ==========================================================================
-   Web Portfolio - Modern Stylesheet (Bootstrap 5 Companion)
+   Web Portfolio - Base Stylesheet (Bootstrap 5 Companion)
+   --------------------------------------------------------------------------
+   Tema Dark Glassmorphism utama dimuat setelah berkas ini melalui
+   assets/css/theme-glass.css pada includes/header.php dan halaman admin.
    ========================================================================== */
 
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary-color: #64748b;
-  --dark-color: #0f172a;
-  --light-bg: #f8fafc;
-  --card-border: #e2e8f0;
+  --primary-color: #38bdf8;
+  --primary-hover: #818cf8;
+  --secondary-color: #8b97ab;
+  --dark-color: #f1f5f9;
+  --light-bg: #0a0d14;
+  --card-border: rgba(255, 255, 255, 0.08);
   --font-heading:
     "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -20,8 +23,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--light-bg);
-  color: #334155;
+  background-color: #0a0d14;
+  color: #cbd5e1;
   overflow-x: hidden;
 }
 
