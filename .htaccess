@@ -1,0 +1,12 @@
+# Matikan direktori listing agar berkas internal tidak terindeks
+Options -Indexes
+
+# Izinkan akses ke semua berkas publik secara normal
+<IfModule mod_authz_core.c>
+    Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+</IfModule>
+

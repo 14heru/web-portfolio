@@ -3,10 +3,16 @@
 # =============================================================================
 
 # -----------------------------------------------------------------------------
-# 1. DEPENDENCY & LIBRARY (Composer)
+# 1. DEPENDENCY & LIBRARY
 # -----------------------------------------------------------------------------
 /vendor/
 composer.phar
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # -----------------------------------------------------------------------------
 # 2. KONFIGURASI SENSITIF (JANGAN DI-COMMIT KE GITHUB)
@@ -75,8 +81,14 @@ error_log
 # 6. ENVIRONMENT & BERKAS RAHASIA LAINNYA
 # -----------------------------------------------------------------------------
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_rsa.pub
 
 # Berkas backup database
 *.sql.bak

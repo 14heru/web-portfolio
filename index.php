@@ -113,7 +113,7 @@ require_once __DIR__ . '/includes/navbar.php';
                     <div class="profile-lanyard" aria-hidden="true"></div>
                     <div class="profile-card">
                         <div class="profile-photo-wrapper">
-                            <img src="assets/img/IMG_3603.JPG.jpeg" alt="Foto profil Heru Perdana Saputra" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
+                            <img src="assets/img/profile.jpg" alt="Foto profil Heru Perdana Saputra" onerror="this.style.display='none'; this.nextElementSibling.hidden=false;">
                             <div class="profile-initials" hidden>HPS<small>Profile photo</small></div>
                         </div>
                         <div class="profile-meta">

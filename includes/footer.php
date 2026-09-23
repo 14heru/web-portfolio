@@ -58,7 +58,7 @@
                 &copy; <?= date('Y'); ?> <span class="text-light fw-medium">Heru Perdana Saputra</span>. All rights reserved.
             </div>
             <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> & Bootstrap 5
+                <!-- Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> & Bootstrap 5 -->
             </div>
         </div>
     </div>
